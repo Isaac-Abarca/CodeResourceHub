@@ -1,0 +1,81 @@
+---
+const categories = [
+  { name: "AI", count: 25 },
+  { name: "Browser", count: 11 },
+  { name: "CMS", count: 11 },
+  { name: "Community", count: 3 },
+  { name: "Compiler", count: 7 },
+  { name: "Crypto", count: 19 },
+  { name: "Database", count: 15 },
+  { name: "Design", count: 20 },
+  { name: "Education", count: 8 },
+  { name: "Entertainment", count: 9 },
+  { name: "Framework", count: 46 },
+  { name: "Hosting", count: 8 },
+  { name: "Language", count: 32 },
+  { name: "Library", count: 40 },
+  { name: "Marketplace", count: 2 },
+  { name: "Music", count: 4 },
+  { name: "Payment", count: 1 },
+  { name: "Social", count: 24 },
+  { name: "Software", count: 143 },
+  { name: "Vercel", count: 4 },
+];
+---
+
+<aside class="aside-menu">
+  <section class="aside-container">
+    {
+      categories.map((category) => (
+        <article class="category-container">
+          <div class="category">
+            {category.name}
+            <span class="count">{category.count}</span>
+          </div>
+        </article>
+      ))
+    }
+  </section>
+</aside>
+
+<style>
+  .aside-menu {
+    position: fixed;
+    top: 60px; /* Ajustar para que inicie después del navbar */
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: #161617;
+    color: #939293;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+
+  .aside-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.5rem;
+    cursor: pointer;
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .category:hover {
+    color: #dfdfdf;
+    background-color: #1d1d1d;
+  }
+
+  .count {
+    font-size: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.4rem 0.5rem 0.3rem;
+    border-radius: 10px;
+  }
+</style>
