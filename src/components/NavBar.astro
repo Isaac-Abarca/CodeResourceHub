@@ -1,0 +1,74 @@
+---
+import IconGithub from "../icons/github.astro";
+import X from "../icons/x.astro";
+import Mode from "../icons/mode.astro";
+import Arrow from "../icons/Arrow.astro";
+import Icon from "../icons/icon.astro";
+---
+
+<nav class="navbar">
+  <div class="logo">
+    <Icon />
+    <span>HubResources</span>
+  </div>
+  <ul class="nav-links">
+    <li>Submit Resource <Arrow class="arrow-icon" /></li>
+    <li><X /></li>
+    <li>
+      <a target="_blank" href="https://github.com/Isaac-Abarca/CodeResourceHub"
+        ><IconGithub /></a
+      >
+    </li>
+    <li><Mode /></li>
+  </ul>
+</nav>
+
+<style>
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #161617;
+    border-bottom: 1px solid #2a2e36;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: blur(0.5);
+
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    color: #fefeff;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+    cursor: pointer;
+  }
+
+  .nav-links li {
+    color: #cccccc;
+    text-decoration: none;
+  }
+
+  .nav-links li:hover {
+    color: #ffffff;
+  }
+  .arrow-icon:hover {
+    color: #fefeff;
+    transform: translateX(1px) translateY(1px);
+  }
+
+</style>
