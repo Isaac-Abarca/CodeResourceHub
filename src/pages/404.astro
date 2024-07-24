@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Page Not Found">
+  <div class="not-found">
+    <div class="not-found-content">
+      <h1>404</h1>
+      <p>Page Not Found</p>
+      <a href="/" class="back-home">Go Home</a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .not-found-content {
+    padding: 2rem;
+  }
+
+  .not-found h1 {
+    font-size: 6rem;
+    margin: 0;
+    color: #ff5555;
+  }
+
+  .not-found p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #cccccc;
+  }
+
+  .back-home {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    color: #ffffff;
+    background-color: #2a2e36;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .back-home:hover {
+    background-color: #444;
+  }
+</style>
+
+
